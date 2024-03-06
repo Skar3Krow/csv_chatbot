@@ -612,3 +612,802 @@ Generate python code and return full updated code:
 2024-03-06 15:25:31 [INFO] Retrying request to /chat/completions in 1.575109 seconds
 2024-03-06 15:25:33 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
 2024-03-06 15:25:33 [ERROR] Pipeline failed on step 3: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2024-03-06 16:00:29 [INFO] Question: What is the Mandal of  Aayush Hareshbhai Chauhan ?
+2024-03-06 16:00:29 [INFO] Running PandasAI with openai LLM...
+2024-03-06 16:00:29 [INFO] Prompt ID: ab82adc5-3ccc-4125-a62e-a64d0ed28754
+2024-03-06 16:00:29 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-06 16:00:29 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-06 16:00:29 [INFO] Executing Step 1: CacheLookup
+2024-03-06 16:00:29 [INFO] Executing Step 2: PromptGeneration
+2024-03-06 16:00:29 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 37
+  columns: 17
+  schema:
+    fields:
+    - name: Name
+      type: object
+      samples:
+      - Mayank Surajsinh Parmar
+      - Aayush Hareshbhai Chauhan
+      - Samar Jitendrakumar Modi
+    - name: Center
+      type: object
+      samples:
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+    - name: Mandal
+      type: object
+      samples:
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+    - name: Regular
+      type: object
+      samples:
+      - 'Yes'
+      - 'Yes'
+      - 'Yes'
+    - name: Std
+      type: int64
+      samples:
+      - 7
+      - 8
+      - 9
+    - name: FathersMobile
+      type: object
+      samples:
+      - '6602495410'
+      - '4035256685'
+      - '1676702607'
+    - name: HomeMobile
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Sanchalak
+      type: object
+      samples:
+      - ' '
+      - ' '
+      - ' '
+    - name: Phone
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: 6/1
+      type: object
+      samples:
+      - P
+      - P
+      - A
+    - name: 13/1
+      type: object
+      samples:
+      - P
+      - P
+      - A
+    - name: 20/1
+      type: object
+      samples:
+      - P
+      - A
+      - P
+    - name: 27/1
+      type: object
+      samples:
+      - P
+      - P
+      - A
+    - name: 3/2
+      type: object
+      samples:
+      - P
+      - A
+      - P
+    - name: 10/2
+      type: object
+      samples:
+      - P
+      - P
+      - A
+    - name: 17/2
+      type: object
+      samples:
+      - A
+      - P
+      - A
+    - name: 24/2
+      type: object
+      samples:
+      - A
+      - P
+      - A
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the Mandal of  Aayush Hareshbhai Chauhan ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-03-06 16:00:29 [INFO] Executing Step 3: CodeGenerator
+2024-03-06 16:00:30 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-03-06 16:00:30 [INFO] Retrying request to /chat/completions in 0.923835 seconds
+2024-03-06 16:00:31 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-03-06 16:00:31 [INFO] Retrying request to /chat/completions in 1.803853 seconds
+2024-03-06 16:00:33 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-03-06 16:00:33 [ERROR] Pipeline failed on step 3: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2024-03-06 16:04:56 [INFO] Question: What is the Mandal of  Aayush Hareshbhai Chauhan ?
+
+2024-03-06 16:04:56 [INFO] Running PandasAI with openai LLM...
+2024-03-06 16:04:56 [INFO] Prompt ID: 2ef2307c-fc01-414d-b9da-43bc2a287447
+2024-03-06 16:04:56 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-06 16:04:56 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-06 16:04:56 [INFO] Executing Step 1: CacheLookup
+2024-03-06 16:04:56 [INFO] Executing Step 2: PromptGeneration
+2024-03-06 16:04:56 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 37
+  columns: 17
+  schema:
+    fields:
+    - name: Name
+      type: object
+      samples:
+      - Vaidik Sanjaybhai Gorasiya
+      - Tej Hirenbhai Parmar
+      - Hetarth Jiteshbhai Dehgamadiya
+    - name: Center
+      type: object
+      samples:
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+    - name: Mandal
+      type: object
+      samples:
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+    - name: Regular
+      type: object
+      samples:
+      - 'Yes'
+      - 'Yes'
+      - 'Yes'
+    - name: Std
+      type: int64
+      samples:
+      - 8
+      - 7
+      - 9
+    - name: FathersMobile
+      type: object
+      samples:
+      - '8703931320'
+      - '4978961523'
+      - '5861702978'
+    - name: HomeMobile
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Sanchalak
+      type: object
+      samples:
+      - ' '
+      - ' '
+      - ' '
+    - name: Phone
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: 6/1
+      type: object
+      samples:
+      - P
+      - P
+      - A
+    - name: 13/1
+      type: object
+      samples:
+      - A
+      - P
+      - P
+    - name: 20/1
+      type: object
+      samples:
+      - A
+      - P
+      - P
+    - name: 27/1
+      type: object
+      samples:
+      - A
+      - A
+      - P
+    - name: 3/2
+      type: object
+      samples:
+      - P
+      - A
+      - A
+    - name: 10/2
+      type: object
+      samples:
+      - A
+      - P
+      - A
+    - name: 17/2
+      type: object
+      samples:
+      - P
+      - A
+      - P
+    - name: 24/2
+      type: object
+      samples:
+      - A
+      - P
+      - P
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the Mandal of  Aayush Hareshbhai Chauhan ?
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-03-06 16:04:56 [INFO] Executing Step 3: CodeGenerator
+2024-03-06 16:04:59 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-06 16:04:59 [INFO] Prompt used:
+            dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 37
+  columns: 17
+  schema:
+    fields:
+    - name: Name
+      type: object
+      samples:
+      - Vaidik Sanjaybhai Gorasiya
+      - Tej Hirenbhai Parmar
+      - Hetarth Jiteshbhai Dehgamadiya
+    - name: Center
+      type: object
+      samples:
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+    - name: Mandal
+      type: object
+      samples:
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+    - name: Regular
+      type: object
+      samples:
+      - 'Yes'
+      - 'Yes'
+      - 'Yes'
+    - name: Std
+      type: int64
+      samples:
+      - 8
+      - 7
+      - 9
+    - name: FathersMobile
+      type: object
+      samples:
+      - '8703931320'
+      - '4978961523'
+      - '5861702978'
+    - name: HomeMobile
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Sanchalak
+      type: object
+      samples:
+      - ' '
+      - ' '
+      - ' '
+    - name: Phone
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: 6/1
+      type: object
+      samples:
+      - P
+      - P
+      - A
+    - name: 13/1
+      type: object
+      samples:
+      - A
+      - P
+      - P
+    - name: 20/1
+      type: object
+      samples:
+      - A
+      - P
+      - P
+    - name: 27/1
+      type: object
+      samples:
+      - A
+      - A
+      - P
+    - name: 3/2
+      type: object
+      samples:
+      - P
+      - A
+      - A
+    - name: 10/2
+      type: object
+      samples:
+      - A
+      - P
+      - A
+    - name: 17/2
+      type: object
+      samples:
+      - P
+      - A
+      - P
+    - name: 24/2
+      type: object
+      samples:
+      - A
+      - P
+      - P
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the Mandal of  Aayush Hareshbhai Chauhan ?
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-03-06 16:04:59 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+dfs[0] = dfs[0].apply(lambda x: x.str.strip() if x.dtype == "object" else x)
+
+mandal_of_aayush = dfs[0][dfs[0]['Name'].str.contains('Aayush Hareshbhai Chauhan', case=False)]['Mandal'].values[0]
+
+result = {
+    "type": "string",
+    "value": f"The Mandal of Aayush Hareshbhai Chauhan is {mandal_of_aayush}."
+}
+            ```
+            
+2024-03-06 16:04:59 [INFO] Executing Step 4: CachePopulation
+2024-03-06 16:04:59 [INFO] Executing Step 5: CodeExecution
+2024-03-06 16:04:59 [INFO] 
+Code running:
+```
+dfs[0] = dfs[0].apply(lambda x: x.str.strip() if x.dtype == 'object' else x)
+mandal_of_aayush = dfs[0][dfs[0]['Name'].str.contains('Aayush Hareshbhai Chauhan', case=False)]['Mandal'].values[0]
+result = {'type': 'string', 'value': f'The Mandal of Aayush Hareshbhai Chauhan is {mandal_of_aayush}.'}
+        ```
+2024-03-06 16:04:59 [INFO] Executing Step 6: ResultValidation
+2024-03-06 16:04:59 [INFO] Answer: {'type': 'string', 'value': 'The Mandal of Aayush Hareshbhai Chauhan is ABS-A-Ghanshyamnagar.'}
+2024-03-06 16:04:59 [INFO] Executing Step 7: ResultParsing
+2024-03-06 16:05:38 [INFO] Question: What is Father's Mobile number of  Aayush Hareshbhai Chauhan ?
+
+2024-03-06 16:05:38 [INFO] Running PandasAI with openai LLM...
+2024-03-06 16:05:38 [INFO] Prompt ID: 8ff3da0d-68df-4020-b8ab-7620c652c86f
+2024-03-06 16:05:38 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-06 16:05:38 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-06 16:05:38 [INFO] Executing Step 1: CacheLookup
+2024-03-06 16:05:38 [INFO] Executing Step 2: PromptGeneration
+2024-03-06 16:05:38 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 37
+  columns: 17
+  schema:
+    fields:
+    - name: Name
+      type: object
+      samples:
+      - Man Jigneshbhai Modi
+      - Utsav Kanaiyalal Kachiya
+      - Sushant Ranjitbhai Prajapati
+    - name: Center
+      type: object
+      samples:
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+    - name: Mandal
+      type: object
+      samples:
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+    - name: Regular
+      type: object
+      samples:
+      - 'Yes'
+      - 'Yes'
+      - 'Yes'
+    - name: Std
+      type: int64
+      samples:
+      - 8
+      - 9
+      - 7
+    - name: FathersMobile
+      type: object
+      samples:
+      - 0219401514
+      - 0030386795
+      - '8801379211'
+    - name: HomeMobile
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Sanchalak
+      type: object
+      samples:
+      - ' '
+      - ' '
+      - ' '
+    - name: Phone
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: 6/1
+      type: object
+      samples:
+      - A
+      - A
+      - P
+    - name: 13/1
+      type: object
+      samples:
+      - P
+      - A
+      - A
+    - name: 20/1
+      type: object
+      samples:
+      - P
+      - P
+      - A
+    - name: 27/1
+      type: object
+      samples:
+      - P
+      - A
+      - A
+    - name: 3/2
+      type: object
+      samples:
+      - P
+      - P
+      - A
+    - name: 10/2
+      type: object
+      samples:
+      - P
+      - A
+      - A
+    - name: 17/2
+      type: object
+      samples:
+      - P
+      - A
+      - P
+    - name: 24/2
+      type: object
+      samples:
+      - P
+      - A
+      - A
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is Father's Mobile number of  Aayush Hareshbhai Chauhan ?
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-03-06 16:05:38 [INFO] Executing Step 3: CodeGenerator
+2024-03-06 16:05:42 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-06 16:05:42 [INFO] Prompt used:
+            dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 37
+  columns: 17
+  schema:
+    fields:
+    - name: Name
+      type: object
+      samples:
+      - Man Jigneshbhai Modi
+      - Utsav Kanaiyalal Kachiya
+      - Sushant Ranjitbhai Prajapati
+    - name: Center
+      type: object
+      samples:
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+    - name: Mandal
+      type: object
+      samples:
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+    - name: Regular
+      type: object
+      samples:
+      - 'Yes'
+      - 'Yes'
+      - 'Yes'
+    - name: Std
+      type: int64
+      samples:
+      - 8
+      - 9
+      - 7
+    - name: FathersMobile
+      type: object
+      samples:
+      - 0219401514
+      - 0030386795
+      - '8801379211'
+    - name: HomeMobile
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Sanchalak
+      type: object
+      samples:
+      - ' '
+      - ' '
+      - ' '
+    - name: Phone
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: 6/1
+      type: object
+      samples:
+      - A
+      - A
+      - P
+    - name: 13/1
+      type: object
+      samples:
+      - P
+      - A
+      - A
+    - name: 20/1
+      type: object
+      samples:
+      - P
+      - P
+      - A
+    - name: 27/1
+      type: object
+      samples:
+      - P
+      - A
+      - A
+    - name: 3/2
+      type: object
+      samples:
+      - P
+      - P
+      - A
+    - name: 10/2
+      type: object
+      samples:
+      - P
+      - A
+      - A
+    - name: 17/2
+      type: object
+      samples:
+      - P
+      - A
+      - P
+    - name: 24/2
+      type: object
+      samples:
+      - P
+      - A
+      - A
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is Father's Mobile number of  Aayush Hareshbhai Chauhan ?
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-03-06 16:05:42 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+father_mobile_number = None
+for df in dfs:
+    if 'Name' in df.columns and 'FathersMobile' in df.columns:
+        filtered_df = df[df['Name'].str.contains('Aayush Hareshbhai Chauhan', case=False)]
+        if not filtered_df.empty:
+            father_mobile_number = filtered_df['FathersMobile'].values[0]
+            break
+
+result = {"type": "string", "value": f"The Father's Mobile number of Aayush Hareshbhai Chauhan is {father_mobile_number}."}
+            ```
+            
+2024-03-06 16:05:42 [INFO] Executing Step 4: CachePopulation
+2024-03-06 16:05:42 [INFO] Executing Step 5: CodeExecution
+2024-03-06 16:05:42 [INFO] 
+Code running:
+```
+father_mobile_number = None
+for df in dfs:
+    if 'Name' in df.columns and 'FathersMobile' in df.columns:
+        filtered_df = df[df['Name'].str.contains('Aayush Hareshbhai Chauhan', case=False)]
+        if not filtered_df.empty:
+            father_mobile_number = filtered_df['FathersMobile'].values[0]
+            break
+result = {'type': 'string', 'value': f"The Father's Mobile number of Aayush Hareshbhai Chauhan is {father_mobile_number}."}
+        ```
+2024-03-06 16:05:42 [INFO] Executing Step 6: ResultValidation
+2024-03-06 16:05:42 [INFO] Answer: {'type': 'string', 'value': "The Father's Mobile number of Aayush Hareshbhai Chauhan is 7433829630."}
+2024-03-06 16:05:42 [INFO] Executing Step 7: ResultParsing
