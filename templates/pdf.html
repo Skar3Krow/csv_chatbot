@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Question Answering</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .sidebar {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 main-content">
+                <h1>PDF Question Answering</h1>
+                <div id="response" class="chat-container mt-3"></div>
+                <div id="questionForm" style="display: none;">
+                    <div class="form-group">
+                        <label for="user_question">Ask a Question</label>
+                        <input type="text" class="form-control" id="user_question" name="user_question" required>
+                    </div>
+                    <button type="button" class="btn btn-success" id="askButton">Ask</button>
+                </div>
+            </div>
+            <div class="col-md-4 sidebar">
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="pdf_docs">Upload PDF Document(s)</label>
+                        <input type="file" class="form-control-file" id="pdf_docs" name="pdf_docs" multiple accept=".pdf" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#uploadForm').submit(function (event) {
+                event.preventDefault();
+                var formData = new FormData($(this)[0]);
+                $.ajax({
+                    url: '/',
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                        $('#questionForm').show();
+                        $('#response').empty();
+                        $('#response').append('<div class="chat-message bot-message"><p>PDF Document(s) Uploaded Successfully!</p></div>');
+                    },
+                    error: function () {
+                        $('#response').append('<div class="chat-message bot-message"><p>Error uploading PDF Document(s).</p></div>');
+                    }
+                });
+            });
+
+            $('#askButton').click(function () {
+                var userQuestion = $('#user_question').val();
+                $('#response').append('<div class="chat-message user-message"><p>' + userQuestion + '</p></div>');
+                $('#user_question').val('');
+
+                $.ajax({
+                    url: '/ask',
+                    type: 'POST',
+                    data: { user_question: userQuestion },
+                    success: function (data) {
+                        var responseText = data.response.replace(/\n/g, '<br>');
+                        $('#response').append('<div class="chat-message bot-message"><p>' + responseText + '</p></div>');
+                    },
+                    error: function () {
+                        $('#response').append('<div class="chat-message bot-message"><p>Error fetching response.</p></div>');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

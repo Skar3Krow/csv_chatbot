@@ -1,0 +1,8 @@
+Flask
+langchain
+langchain-google-genai
+pandas
+python-dotenv
+PyPDF2
+streamlit
+pandasai

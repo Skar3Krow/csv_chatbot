@@ -1,0 +1,614 @@
+2024-03-06 15:07:35 [INFO] Question: What is Father mobile number of Adil Hasmukhbhai Makvana ?
+
+2024-03-06 15:07:35 [INFO] Running PandasAI with openai LLM...
+2024-03-06 15:07:35 [INFO] Prompt ID: 2afe0a70-4a24-4808-8ec6-f44d7ff8dbec
+2024-03-06 15:07:35 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-06 15:07:35 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-06 15:07:35 [INFO] Executing Step 1: CacheLookup
+2024-03-06 15:07:35 [INFO] Executing Step 2: PromptGeneration
+2024-03-06 15:07:35 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 37
+  columns: 17
+  schema:
+    fields:
+    - name: Name
+      type: object
+      samples:
+      - Rudra Hareshbhai Sojitra
+      - Aayush Hareshbhai Chauhan
+      - Nishit Jayeshbhai Sharma
+    - name: Center
+      type: object
+      samples:
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+    - name: Mandal
+      type: object
+      samples:
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+    - name: Regular
+      type: object
+      samples:
+      - 'Yes'
+      - 'Yes'
+      - 'Yes'
+    - name: Std
+      type: int64
+      samples:
+      - 9
+      - 8
+      - 7
+    - name: FathersMobile
+      type: object
+      samples:
+      - '5438519038'
+      - 0804016121
+      - '6288116509'
+    - name: HomeMobile
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Sanchalak
+      type: object
+      samples:
+      - ' '
+      - ' '
+      - ' '
+    - name: Phone
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: 6/1
+      type: object
+      samples:
+      - A
+      - P
+      - A
+    - name: 13/1
+      type: object
+      samples:
+      - P
+      - A
+      - P
+    - name: 20/1
+      type: object
+      samples:
+      - P
+      - P
+      - A
+    - name: 27/1
+      type: object
+      samples:
+      - P
+      - A
+      - A
+    - name: 3/2
+      type: object
+      samples:
+      - P
+      - A
+      - P
+    - name: 10/2
+      type: object
+      samples:
+      - P
+      - A
+      - P
+    - name: 17/2
+      type: object
+      samples:
+      - A
+      - P
+      - A
+    - name: 24/2
+      type: object
+      samples:
+      - P
+      - A
+      - A
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is Father mobile number of Adil Hasmukhbhai Makvana ?
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-03-06 15:07:35 [INFO] Executing Step 3: CodeGenerator
+2024-03-06 15:07:43 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2024-03-06 15:07:43 [INFO] Retrying request to /chat/completions in 0.886664 seconds
+2024-03-06 15:07:49 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2024-03-06 15:07:49 [INFO] Retrying request to /chat/completions in 1.841980 seconds
+2024-03-06 15:07:57 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 500 Internal Server Error"
+2024-03-06 15:07:57 [ERROR] Pipeline failed on step 3: Error code: 500 - {'error': {'message': 'Internal server error', 'type': 'auth_subrequest_error', 'param': None, 'code': 'internal_error'}}
+2024-03-06 15:18:08 [INFO] Question: What is Father mobile number of Adil Hasmukhbhai Makvana ?
+2024-03-06 15:18:08 [INFO] Running PandasAI with openai LLM...
+2024-03-06 15:18:08 [INFO] Prompt ID: 3930e9b1-ed07-4693-a82f-b4518fcad0a7
+2024-03-06 15:18:08 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-06 15:18:08 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-06 15:18:08 [INFO] Executing Step 1: CacheLookup
+2024-03-06 15:18:08 [INFO] Executing Step 2: PromptGeneration
+2024-03-06 15:18:08 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 37
+  columns: 17
+  schema:
+    fields:
+    - name: Name
+      type: object
+      samples:
+      - Rinesh Bhavikkumar Sharma
+      - Ritesh Bhavikbhai Sharma
+      - Sharad Giradharbhai Parmar
+    - name: Center
+      type: object
+      samples:
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+    - name: Mandal
+      type: object
+      samples:
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+    - name: Regular
+      type: object
+      samples:
+      - 'Yes'
+      - 'Yes'
+      - 'Yes'
+    - name: Std
+      type: int64
+      samples:
+      - 8
+      - 7
+      - 9
+    - name: FathersMobile
+      type: object
+      samples:
+      - '9814873854'
+      - '2453818313'
+      - '7355445417'
+    - name: HomeMobile
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Sanchalak
+      type: object
+      samples:
+      - ' '
+      - ' '
+      - ' '
+    - name: Phone
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: 6/1
+      type: object
+      samples:
+      - A
+      - A
+      - P
+    - name: 13/1
+      type: object
+      samples:
+      - P
+      - P
+      - A
+    - name: 20/1
+      type: object
+      samples:
+      - A
+      - A
+      - P
+    - name: 27/1
+      type: object
+      samples:
+      - A
+      - P
+      - P
+    - name: 3/2
+      type: object
+      samples:
+      - P
+      - A
+      - A
+    - name: 10/2
+      type: object
+      samples:
+      - A
+      - P
+      - P
+    - name: 17/2
+      type: object
+      samples:
+      - A
+      - A
+      - P
+    - name: 24/2
+      type: object
+      samples:
+      - P
+      - A
+      - P
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is Father mobile number of Adil Hasmukhbhai Makvana ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-03-06 15:18:08 [INFO] Executing Step 3: CodeGenerator
+2024-03-06 15:18:09 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-03-06 15:18:09 [INFO] Retrying request to /chat/completions in 0.818120 seconds
+2024-03-06 15:18:10 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-03-06 15:18:10 [INFO] Retrying request to /chat/completions in 1.583797 seconds
+2024-03-06 15:18:12 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-03-06 15:18:12 [ERROR] Pipeline failed on step 3: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2024-03-06 15:21:08 [INFO] Question: What is Father mobile number of Adil Hasmukhbhai Makvana ?
+2024-03-06 15:21:08 [INFO] Running PandasAI with openai LLM...
+2024-03-06 15:21:08 [INFO] Prompt ID: 2b8c8b45-60d7-47e1-aace-0cf6f180554d
+2024-03-06 15:21:08 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-06 15:21:08 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-06 15:21:08 [INFO] Executing Step 1: CacheLookup
+2024-03-06 15:21:08 [INFO] Executing Step 2: PromptGeneration
+2024-03-06 15:21:08 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 37
+  columns: 17
+  schema:
+    fields:
+    - name: Name
+      type: object
+      samples:
+      - Sandeep Bharatbhai Gohil
+      - Sharad Giradharbhai Parmar
+      - Rinesh Bhavikkumar Sharma
+    - name: Center
+      type: object
+      samples:
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+    - name: Mandal
+      type: object
+      samples:
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+    - name: Regular
+      type: object
+      samples:
+      - 'Yes'
+      - 'Yes'
+      - 'Yes'
+    - name: Std
+      type: int64
+      samples:
+      - 8
+      - 9
+      - 7
+    - name: FathersMobile
+      type: object
+      samples:
+      - '4158685880'
+      - '5798516063'
+      - '8838582582'
+    - name: HomeMobile
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Sanchalak
+      type: object
+      samples:
+      - ' '
+      - ' '
+      - ' '
+    - name: Phone
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: 6/1
+      type: object
+      samples:
+      - P
+      - A
+      - A
+    - name: 13/1
+      type: object
+      samples:
+      - P
+      - A
+      - P
+    - name: 20/1
+      type: object
+      samples:
+      - A
+      - P
+      - P
+    - name: 27/1
+      type: object
+      samples:
+      - A
+      - P
+      - P
+    - name: 3/2
+      type: object
+      samples:
+      - P
+      - A
+      - P
+    - name: 10/2
+      type: object
+      samples:
+      - A
+      - A
+      - P
+    - name: 17/2
+      type: object
+      samples:
+      - A
+      - A
+      - P
+    - name: 24/2
+      type: object
+      samples:
+      - P
+      - P
+      - A
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is Father mobile number of Adil Hasmukhbhai Makvana ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-03-06 15:21:08 [INFO] Executing Step 3: CodeGenerator
+2024-03-06 15:21:08 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-03-06 15:21:08 [INFO] Retrying request to /chat/completions in 0.761245 seconds
+2024-03-06 15:21:10 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-03-06 15:21:10 [INFO] Retrying request to /chat/completions in 1.547111 seconds
+2024-03-06 15:21:12 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-03-06 15:21:12 [ERROR] Pipeline failed on step 3: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2024-03-06 15:25:29 [INFO] Question: What is Father mobile number of Adil Hasmukhbhai Makvana ?
+2024-03-06 15:25:29 [INFO] Running PandasAI with openai LLM...
+2024-03-06 15:25:29 [INFO] Prompt ID: 466b1efe-c405-4884-bc02-222ebbe9f7a9
+2024-03-06 15:25:29 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-06 15:25:29 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-06 15:25:29 [INFO] Executing Step 1: CacheLookup
+2024-03-06 15:25:29 [INFO] Executing Step 2: PromptGeneration
+2024-03-06 15:25:29 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 37
+  columns: 17
+  schema:
+    fields:
+    - name: Name
+      type: object
+      samples:
+      - Rudresh Bharatbhai Korat
+      - Yash Sunilbhai Kushwah
+      - Jaimin Prabhudasbhai Gohil
+    - name: Center
+      type: object
+      samples:
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+      - ABS-Ghanshyamnagar
+    - name: Mandal
+      type: object
+      samples:
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+      - ABS-A-Ghanshyamnagar
+    - name: Regular
+      type: object
+      samples:
+      - 'Yes'
+      - 'Yes'
+      - 'Yes'
+    - name: Std
+      type: int64
+      samples:
+      - 8
+      - 9
+      - 7
+    - name: FathersMobile
+      type: object
+      samples:
+      - '3880005762'
+      - '8382962781'
+      - '5788620702'
+    - name: HomeMobile
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Sanchalak
+      type: object
+      samples:
+      - ' '
+      - ' '
+      - ' '
+    - name: Phone
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: 6/1
+      type: object
+      samples:
+      - P
+      - A
+      - P
+    - name: 13/1
+      type: object
+      samples:
+      - A
+      - P
+      - P
+    - name: 20/1
+      type: object
+      samples:
+      - P
+      - P
+      - A
+    - name: 27/1
+      type: object
+      samples:
+      - P
+      - A
+      - A
+    - name: 3/2
+      type: object
+      samples:
+      - P
+      - A
+      - A
+    - name: 10/2
+      type: object
+      samples:
+      - P
+      - A
+      - P
+    - name: 17/2
+      type: object
+      samples:
+      - A
+      - P
+      - P
+    - name: 24/2
+      type: object
+      samples:
+      - A
+      - P
+      - P
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is Father mobile number of Adil Hasmukhbhai Makvana ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-03-06 15:25:29 [INFO] Executing Step 3: CodeGenerator
+2024-03-06 15:25:30 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-03-06 15:25:30 [INFO] Retrying request to /chat/completions in 0.800383 seconds
+2024-03-06 15:25:31 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-03-06 15:25:31 [INFO] Retrying request to /chat/completions in 1.575109 seconds
+2024-03-06 15:25:33 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-03-06 15:25:33 [ERROR] Pipeline failed on step 3: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
