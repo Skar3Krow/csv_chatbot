@@ -17,7 +17,6 @@ def chat_with_csv(df, prompt):
     print("Point 3")
     # Process prompt using GeminiAPI
     result = "Placeholder result from GeminiAPI"  # Placeholder for Gemini API result
-    print("Point 4")
     print(result)   
     return result
 
