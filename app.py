@@ -11,6 +11,7 @@ from htmlTemplates import css, bot_template, user_template
 load_dotenv()
 
 openai_api_key = os.getenv('OPEN_API_KEY')
+os.environ["PANDASAI_API_KEY"] = os.getenv('YOUR_PANDASAIAPI_KEY')
 st.set_page_config(page_title="CSV-GPT",layout='wide',page_icon=":bar_chart:")
 
 st.write(css,unsafe_allow_html=True)
@@ -76,9 +77,14 @@ flex-direction:row;
 '''
 
 def chat_wtih_csv(df,prompt):
-    llm =OpenAI()
+    llm =OpenAI(temperature=1)
     # pandas_ai = SmartDataframe(df=df,config={"llm":llm})
+
     pandas_ai = Agent(dfs=df,config={"llm":llm},memory_size=10)
+    pandas_ai.train(docs="The data for January starts from row 2 till row 7489")
+
+    response = pandas_ai.chat("How many rows are considered for January?")
+    print(response)
     
 
     result = pandas_ai.chat(prompt)
@@ -112,9 +118,9 @@ if input_csv is not None:
                 # st.info("Your query: "+input_text)
                 
                 result = chat_wtih_csv(data,input_text)
-                st.write(bot_template.replace(
-                "{{MSG}}", result), unsafe_allow_html=True)
-                # st.success(result)
+                # st.write(bot_template.replace(
+                # "{{MSG}}", result), unsafe_allow_html=True)
+                st.success(result)
 else:
     st.markdown(card1, unsafe_allow_html=True)
                 

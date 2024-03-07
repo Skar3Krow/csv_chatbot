@@ -43,7 +43,7 @@ bot_template = '''
         <img src="https://img.freepik.com/premium-vector/bot-icon-chatbot-icon-concept-vector-illustration_230920-1327.jpg" style="max-height: 78px; max-width: 78px; border-radius: 50%; object-fit: cover;">
     </div>
     <div class="fleex">
-    <div class="you">PDF-GPT</div>
+    <div class="you">CSV-GPT</div>
     <div class="message">{{MSG}}</div>
     </div>
     
@@ -56,7 +56,7 @@ user_template = '''
         <img src="https://e7.pngegg.com/pngimages/178/595/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black-thumbnail.png">
     </div>
     <div class="fleex">
-    <div class="you">You</div>
+    <div class="you">User</div>
     <div class="message">{{MSG}}</div>
     </div>
 </div>
