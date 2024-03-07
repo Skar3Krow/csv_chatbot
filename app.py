@@ -82,7 +82,6 @@ def chat_wtih_csv(df,prompt):
 
     pandas_ai = Agent(dfs=df,config={"llm":llm},memory_size=10)
     pandas_ai.train(docs="The data for January starts from row 2 till row 7489")
-
     response = pandas_ai.chat("How many rows are considered for January?")
     print(response)
     

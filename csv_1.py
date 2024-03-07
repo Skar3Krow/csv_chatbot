@@ -10,11 +10,8 @@ load_dotenv()
 gemini_api_key = os.getenv("GEMINI_API_KEY")  # Placeholder for Gemini API key
 
 def chat_with_csv(df, prompt):
-    print("Point 1")
     gemini = geminiapi(api_key=gemini_api_key)  # Placeholder for Gemini API initialization
-    print("Point 2")
     # Use GeminiAPI methods to process natural language queries
-    print("Point 3")
     # Process prompt using GeminiAPI
     result = "Placeholder result from GeminiAPI"  # Placeholder for Gemini API result
     print(result)   
