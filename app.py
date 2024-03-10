@@ -13,7 +13,7 @@ load_dotenv()
 openai_api_key = os.getenv('OPENAI_API_KEY')
 os.environ["PANDASAI_API_KEY"] = os.getenv('YOUR_PANDASAIAPI_KEY')
 with open('styles.css') as f:
-    st.markdown(f'<styles>{f.read()}</styles>', unsafe_allow_html=True)
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 # st.set_page_config(page_title="CSV-GPT",layout='wide',page_icon=":bar_chart:")
 
 st.write(css,unsafe_allow_html=True)
