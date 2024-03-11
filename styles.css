@@ -6,3 +6,23 @@ header.st-emotion-cache-1vtp92w {
     
 
 }
+
+section.st-emotion-cache-1y1t3av.e1b2p2ww15 {
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+button.st-emotion-cache-7cd663 {
+    background-color: transparent;
+}
+
+button.st-emotion-cache-7cd663:hover {
+    border-color: #927fe6;
+    color: #927fe6;
+}
