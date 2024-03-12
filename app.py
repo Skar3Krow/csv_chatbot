@@ -42,7 +42,7 @@ col1, col2 =st.columns([5, 2])
 
 with col2:
     st.header("Upload the .csv file here",divider="violet")
-    input_csv = st.file_uploader("",type=['csv'])
+    input_csv = st.file_uploader("Upload here",type=['csv'])
     
 with col1:
     if input_csv is not None:
@@ -59,11 +59,14 @@ with col1:
                 st.write(user_template.replace("{{MSG}}", input_text), unsafe_allow_html=True)
                 
                 # st.info("Your query: "+input_text)
-                
+
                 result = chat_wtih_csv(data,input_text)
+                if isinstance(result, pd.DataFrame):
+                    st.dataframe(result)
+                else:
+                    st.success(result)
                 # st.write(bot_template.replace(
                 # "{{MSG}}", result), unsafe_allow_html=True)
-                st.success(result)
         
 
      

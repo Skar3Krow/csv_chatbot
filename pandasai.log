@@ -40042,3 +40042,3784 @@ result = {'type': 'string', 'value': f'The average baromatic pressure for Februa
 2024-03-11 18:08:48 [INFO] Executing Step 6: ResultValidation
 2024-03-11 18:08:48 [INFO] Answer: {'type': 'string', 'value': 'The average baromatic pressure for February 2024 is 995.9361901639344'}
 2024-03-11 18:08:48 [INFO] Executing Step 7: ResultParsing
+2024-03-12 12:44:15 [INFO] Question: What are first five rows ?
+2024-03-12 12:44:15 [INFO] Running PandasAI with openai LLM...
+2024-03-12 12:44:15 [INFO] Prompt ID: f11fdb57-7fa1-4df2-a968-48a6d835690f
+2024-03-12 12:44:15 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-12 12:44:15 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-12 12:44:15 [INFO] Executing Step 1: CacheLookup
+2024-03-12 12:44:15 [INFO] Executing Step 2: PromptGeneration
+2024-03-12 12:44:23 [ERROR] Pipeline failed on step 2: 'data'
+2024-03-12 12:48:56 [INFO] Question: What is the average barometric pressure for january 2024 ?
+2024-03-12 12:48:56 [INFO] Running PandasAI with openai LLM...
+2024-03-12 12:48:56 [INFO] Prompt ID: 8e5de807-709b-4622-a3c3-ea3459d0cdbc
+2024-03-12 12:48:56 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-12 12:48:56 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-12 12:48:56 [INFO] Executing Step 1: CacheLookup
+2024-03-12 12:48:56 [INFO] Executing Step 2: PromptGeneration
+2024-03-12 12:49:01 [ERROR] Pipeline failed on step 2: 'data'
+2024-03-12 12:50:44 [INFO] Question: What is the average barometric pressure on 16th January 2024 ?
+2024-03-12 12:50:44 [INFO] Running PandasAI with openai LLM...
+2024-03-12 12:50:44 [INFO] Prompt ID: 21fda6cc-ec4f-44ab-86e0-01020b8dbb8b
+2024-03-12 12:50:44 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-12 12:50:44 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-12 12:50:44 [INFO] Executing Step 1: CacheLookup
+2024-03-12 12:50:44 [INFO] Executing Step 2: PromptGeneration
+2024-03-12 12:51:13 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 2/17/2024 13:15
+      - 1/23/2024 4:55
+      - 2/19/2024 2:40
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 3.94
+      - 2.68
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 36.75
+      - .nan
+      - 32.22
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - 996.24
+      - .nan
+      - 996.72
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 688.81
+      - .nan
+      - 273.93
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - 94.96
+      - .nan
+      - 340.97
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - .nan
+      - 37.86
+      - 49.6
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - 48.59
+      - .nan
+      - 18.15
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - .nan
+      - 74.89
+      - 186.92
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 4.27
+      - 3.22
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+Ambient Temperature is different from Ambient Temp for all the rows
+
+### QUERY
+ What is the average barometric pressure on 16th January 2024 ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-03-12 12:51:13 [INFO] Executing Step 3: CodeGenerator
+2024-03-12 12:51:17 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-12 12:51:17 [INFO] Prompt used:
+            dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 2/17/2024 13:15
+      - 1/23/2024 4:55
+      - 2/19/2024 2:40
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 3.94
+      - 2.68
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 36.75
+      - .nan
+      - 32.22
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - 996.24
+      - .nan
+      - 996.72
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 688.81
+      - .nan
+      - 273.93
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - 94.96
+      - .nan
+      - 340.97
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - .nan
+      - 37.86
+      - 49.6
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - 48.59
+      - .nan
+      - 18.15
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - .nan
+      - 74.89
+      - 186.92
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 4.27
+      - 3.22
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+Ambient Temperature is different from Ambient Temp for all the rows
+
+### QUERY
+ What is the average barometric pressure on 16th January 2024 ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-03-12 12:51:17 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Filter the data for 16th January 2024
+barometric_pressure_df = dfs[0][dfs[0]['timestamp'].str.contains('1/16/2024')]
+barometric_pressure_avg = barometric_pressure_df['power_plant_531c.ctr.wms.barometric_pressure'].mean()
+
+# Result
+result = { "type": "string", "value": f"The average barometric pressure on 16th January 2024 was: {barometric_pressure_avg}" }
+            ```
+            
+2024-03-12 12:51:17 [INFO] Executing Step 4: CachePopulation
+2024-03-12 12:51:17 [INFO] Executing Step 5: CodeExecution
+2024-03-12 12:51:17 [INFO] 
+Code running:
+```
+barometric_pressure_df = dfs[0][dfs[0]['timestamp'].str.contains('1/16/2024')]
+barometric_pressure_avg = barometric_pressure_df['power_plant_531c.ctr.wms.barometric_pressure'].mean()
+result = {'type': 'string', 'value': f'The average barometric pressure on 16th January 2024 was: {barometric_pressure_avg}'}
+        ```
+2024-03-12 12:51:17 [INFO] Executing Step 6: ResultValidation
+2024-03-12 12:51:17 [INFO] Answer: {'type': 'string', 'value': 'The average barometric pressure on 16th January 2024 was: 996.0330208333334'}
+2024-03-12 12:51:17 [INFO] Executing Step 7: ResultParsing
+2024-03-12 12:51:31 [INFO] Question: What is the average barometric pressure on 21th January 2024 ?
+2024-03-12 12:51:31 [INFO] Running PandasAI with openai LLM...
+2024-03-12 12:51:31 [INFO] Prompt ID: 5a84533b-f003-4cd0-ae53-afcdf408d261
+2024-03-12 12:51:31 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-12 12:51:31 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-12 12:51:31 [INFO] Executing Step 1: CacheLookup
+2024-03-12 12:51:31 [INFO] Executing Step 2: PromptGeneration
+2024-03-12 12:51:35 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 2/18/2024 11:20
+      - 1/19/2024 22:35
+      - 1/10/2024 11:10
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - .nan
+      - 3.79
+      - 2.48
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - .nan
+      - 34.05
+      - 25.2
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - 996.52
+      - 996.66
+      - .nan
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 438.74
+      - 18.88
+      - .nan
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - .nan
+      - 727.17
+      - 642.92
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - 41.45
+      - 82.96
+      - .nan
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - 39.79
+      - 62.88
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - 242.0
+      - 112.9
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 0.55
+      - 2.86
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+
+### QUERY
+ What is the average barometric pressure on 21th January 2024 ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-03-12 12:51:35 [INFO] Executing Step 3: CodeGenerator
+2024-03-12 12:51:37 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-12 12:51:37 [INFO] Prompt used:
+            dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 2/18/2024 11:20
+      - 1/19/2024 22:35
+      - 1/10/2024 11:10
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - .nan
+      - 3.79
+      - 2.48
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - .nan
+      - 34.05
+      - 25.2
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - 996.52
+      - 996.66
+      - .nan
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 438.74
+      - 18.88
+      - .nan
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - .nan
+      - 727.17
+      - 642.92
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - 41.45
+      - 82.96
+      - .nan
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - 39.79
+      - 62.88
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - 242.0
+      - 112.9
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 0.55
+      - 2.86
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+
+### QUERY
+ What is the average barometric pressure on 21th January 2024 ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-03-12 12:51:37 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Filter the data for January 21st, 2024
+jan_21_data = dfs[0][(dfs[0]['timestamp'].str.contains('1/21/2024'))]
+
+# Calculate the average barometric pressure
+avg_barometric_pressure = jan_21_data['power_plant_531c.ctr.wms.barometric_pressure'].mean()
+
+# Declare result variable
+result = {"type": "string", "value": f"The average barometric pressure on 21th January 2024 is {avg_barometric_pressure}."}
+            ```
+            
+2024-03-12 12:51:37 [INFO] Executing Step 4: CachePopulation
+2024-03-12 12:51:37 [INFO] Executing Step 5: CodeExecution
+2024-03-12 12:51:37 [INFO] 
+Code running:
+```
+jan_21_data = dfs[0][dfs[0]['timestamp'].str.contains('1/21/2024')]
+avg_barometric_pressure = jan_21_data['power_plant_531c.ctr.wms.barometric_pressure'].mean()
+result = {'type': 'string', 'value': f'The average barometric pressure on 21th January 2024 is {avg_barometric_pressure}.'}
+        ```
+2024-03-12 12:51:37 [INFO] Executing Step 6: ResultValidation
+2024-03-12 12:51:37 [INFO] Answer: {'type': 'string', 'value': 'The average barometric pressure on 21th January 2024 is 994.2451388888888.'}
+2024-03-12 12:51:37 [INFO] Executing Step 7: ResultParsing
+2024-03-12 12:51:46 [INFO] Question: What is the average barometric pressure on 21st January 2024 ?
+2024-03-12 12:51:46 [INFO] Running PandasAI with openai LLM...
+2024-03-12 12:51:46 [INFO] Prompt ID: 2f73e8c4-25af-4ea9-9f10-b51c9d0d8ebd
+2024-03-12 12:51:46 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-12 12:51:46 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-12 12:51:46 [INFO] Executing Step 1: CacheLookup
+2024-03-12 12:51:46 [INFO] Executing Step 2: PromptGeneration
+2024-03-12 12:51:48 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 1/8/2024 22:15
+      - 1/13/2024 10:55
+      - 1/12/2024 2:25
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 3.44
+      - .nan
+      - 0.26
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 24.1
+      - 31.23
+      - .nan
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - 996.45
+      - 996.29
+      - .nan
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 395.22
+      - .nan
+      - 37.71
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - 98.55
+      - .nan
+      - 168.86
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - .nan
+      - 40.12
+      - 76.52
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - .nan
+      - 36.32
+      - 55.0
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - .nan
+      - 115.51
+      - 206.93
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - .nan
+      - 0.32
+      - 4.47
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+
+### QUERY
+ What is the average barometric pressure on 21st January 2024 ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-03-12 12:51:48 [INFO] Executing Step 3: CodeGenerator
+2024-03-12 12:51:51 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-12 12:51:51 [INFO] Prompt used:
+            dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 1/8/2024 22:15
+      - 1/13/2024 10:55
+      - 1/12/2024 2:25
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 3.44
+      - .nan
+      - 0.26
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 24.1
+      - 31.23
+      - .nan
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - 996.45
+      - 996.29
+      - .nan
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 395.22
+      - .nan
+      - 37.71
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - 98.55
+      - .nan
+      - 168.86
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - .nan
+      - 40.12
+      - 76.52
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - .nan
+      - 36.32
+      - 55.0
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - .nan
+      - 115.51
+      - 206.93
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - .nan
+      - 0.32
+      - 4.47
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+
+### QUERY
+ What is the average barometric pressure on 21st January 2024 ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-03-12 12:51:51 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Filter the data for January
+january_data = dfs[0].loc[(dfs[0]['timestamp'] >= '1/1/2024') & (dfs[0]['timestamp'] < '2/1/2024')]
+
+# Calculate the average barometric pressure on 21st January 2024
+average_barometric_pressure = january_data.loc[january_data['timestamp'].str.contains('1/21/2024', case=False)]['power_plant_531c.ctr.wms.barometric_pressure'].mean()
+
+# Declare result variable
+result = {
+    "type": "number",
+    "value": average_barometric_pressure
+}
+            ```
+            
+2024-03-12 12:51:51 [INFO] Executing Step 4: CachePopulation
+2024-03-12 12:51:51 [INFO] Executing Step 5: CodeExecution
+2024-03-12 12:51:51 [INFO] 
+Code running:
+```
+january_data = dfs[0].loc[(dfs[0]['timestamp'] >= '1/1/2024') & (dfs[0]['timestamp'] < '2/1/2024')]
+average_barometric_pressure = january_data.loc[january_data['timestamp'].str.contains('1/21/2024', case=False)]['power_plant_531c.ctr.wms.barometric_pressure'].mean()
+result = {'type': 'number', 'value': average_barometric_pressure}
+        ```
+2024-03-12 12:51:51 [INFO] Executing Step 6: ResultValidation
+2024-03-12 12:51:51 [INFO] Answer: {'type': 'number', 'value': 994.2451388888888}
+2024-03-12 12:51:51 [INFO] Executing Step 7: ResultParsing
+2024-03-12 12:52:34 [INFO] Question: Plot a bar graph of the barometric pressure for the month of January 2024 and highlight the anomalies 
+2024-03-12 12:52:34 [INFO] Running PandasAI with openai LLM...
+2024-03-12 12:52:34 [INFO] Prompt ID: 32a26ab9-17e3-4ff5-a5ec-e5c1837b0a62
+2024-03-12 12:52:34 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-12 12:52:34 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-12 12:52:34 [INFO] Executing Step 1: CacheLookup
+2024-03-12 12:52:34 [INFO] Executing Step 2: PromptGeneration
+2024-03-12 12:52:37 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 1/30/2024 0:50
+      - 2/9/2024 9:30
+      - 2/10/2024 20:20
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 3.79
+      - 1.75
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 22.66
+      - .nan
+      - 21.78
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - 996.32
+      - .nan
+      - 996.16
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 245.15
+      - 758.16
+      - .nan
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - .nan
+      - 11.58
+      - 541.43
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - 54.93
+      - 37.64
+      - .nan
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - 28.47
+      - .nan
+      - 62.68
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - 65.79
+      - 50.05
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 1.11
+      - 4.0
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+
+### QUERY
+ Plot a bar graph of the barometric pressure for the month of January 2024 and highlight the anomalies 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-03-12 12:52:37 [INFO] Executing Step 3: CodeGenerator
+2024-03-12 12:52:42 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-12 12:52:42 [INFO] Prompt used:
+            dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 1/30/2024 0:50
+      - 2/9/2024 9:30
+      - 2/10/2024 20:20
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 3.79
+      - 1.75
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 22.66
+      - .nan
+      - 21.78
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - 996.32
+      - .nan
+      - 996.16
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 245.15
+      - 758.16
+      - .nan
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - .nan
+      - 11.58
+      - 541.43
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - 54.93
+      - 37.64
+      - .nan
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - 28.47
+      - .nan
+      - 62.68
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - 65.79
+      - 50.05
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 1.11
+      - 4.0
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+
+### QUERY
+ Plot a bar graph of the barometric pressure for the month of January 2024 and highlight the anomalies 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-03-12 12:52:43 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Extracting data for January 2024
+january_data = dfs[0].iloc[1:7490]
+
+# Creating a bar graph to visualize the barometric pressure for January 2024
+plt.figure(figsize=(12, 6))
+plt.bar(january_data['timestamp'], january_data['power_plant_531c.ctr.wms.barometric_pressure'], color='skyblue')
+plt.xlabel('Date')
+plt.ylabel('Barometric Pressure')
+plt.title('Barometric Pressure for January 2024')
+plt.xticks(rotation=45)
+plt.grid(axis='y')
+
+# Highlighting anomalies
+anomaly_indices = january_data.index[january_data['power_plant_531c.ctr.wms.barometric_pressure'].isnull()]
+for i in anomaly_indices:
+    plt.bar(january_data['timestamp'][i], january_data['power_plant_531c.ctr.wms.barometric_pressure'][i], color='red')
+
+# Save the plot as a png file
+plt.tight_layout()
+plt.savefig('barometric_pressure_january_2024.png')
+
+# Declare result variable
+result = {"type": "plot", "value": "barometric_pressure_january_2024.png"}
+            ```
+            
+2024-03-12 12:52:43 [INFO] Executing Step 4: CachePopulation
+2024-03-12 12:52:43 [INFO] Executing Step 5: CodeExecution
+2024-03-12 12:52:43 [INFO] Saving charts to /Users/skar3krow/Desktop/csv_chatbot/exports/charts/temp_chart.png
+2024-03-12 12:52:43 [INFO] 
+Code running:
+```
+january_data = dfs[0].iloc[1:7490]
+plt.figure(figsize=(12, 6))
+plt.bar(january_data['timestamp'], january_data['power_plant_531c.ctr.wms.barometric_pressure'], color='skyblue')
+plt.xlabel('Date')
+plt.ylabel('Barometric Pressure')
+plt.title('Barometric Pressure for January 2024')
+plt.xticks(rotation=45)
+plt.grid(axis='y')
+anomaly_indices = january_data.index[january_data['power_plant_531c.ctr.wms.barometric_pressure'].isnull()]
+for i in anomaly_indices:
+    plt.bar(january_data['timestamp'][i], january_data['power_plant_531c.ctr.wms.barometric_pressure'][i], color='red')
+plt.tight_layout()
+plt.savefig('/Users/skar3krow/Desktop/csv_chatbot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/skar3krow/Desktop/csv_chatbot/exports/charts/temp_chart.png'}
+        ```
+2024-03-12 12:52:43 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:43 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:52:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 12:53:04 [INFO] Executing Step 6: ResultValidation
+2024-03-12 12:53:04 [INFO] Answer: {'type': 'plot', 'value': '/Users/skar3krow/Desktop/csv_chatbot/exports/charts/temp_chart.png'}
+2024-03-12 12:53:04 [INFO] Executing Step 7: ResultParsing
+2024-03-12 12:53:55 [INFO] Question: Plot a line graph of the barometric pressure for the month of January 2024 and highlight the anomalies 
+2024-03-12 12:53:55 [INFO] Running PandasAI with openai LLM...
+2024-03-12 12:53:55 [INFO] Prompt ID: dc364625-fac3-4eb0-99ce-e6ae87e2afba
+2024-03-12 12:53:55 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-12 12:53:55 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-12 12:53:55 [INFO] Executing Step 1: CacheLookup
+2024-03-12 12:53:55 [INFO] Executing Step 2: PromptGeneration
+2024-03-12 12:53:58 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 1/26/2024 1:15
+      - 2/9/2024 20:45
+      - 2/25/2024 4:10
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - .nan
+      - 1.85
+      - 1.86
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 17.78
+      - 36.35
+      - .nan
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - .nan
+      - 996.29
+      - 996.52
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - .nan
+      - 183.6
+      - 268.86
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - 470.62
+      - .nan
+      - 242.28
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - 36.89
+      - 54.8
+      - .nan
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - 53.77
+      - 38.99
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - .nan
+      - 111.99
+      - 98.63
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 4.69
+      - .nan
+      - 1.79
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+
+### QUERY
+ Plot a line graph of the barometric pressure for the month of January 2024 and highlight the anomalies 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-03-12 12:53:58 [INFO] Executing Step 3: CodeGenerator
+2024-03-12 12:54:04 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-12 12:54:04 [INFO] Prompt used:
+            dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 1/26/2024 1:15
+      - 2/9/2024 20:45
+      - 2/25/2024 4:10
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - .nan
+      - 1.85
+      - 1.86
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 17.78
+      - 36.35
+      - .nan
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - .nan
+      - 996.29
+      - 996.52
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - .nan
+      - 183.6
+      - 268.86
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - 470.62
+      - .nan
+      - 242.28
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - 36.89
+      - 54.8
+      - .nan
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - 53.77
+      - 38.99
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - .nan
+      - 111.99
+      - 98.63
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 4.69
+      - .nan
+      - 1.79
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+
+### QUERY
+ Plot a line graph of the barometric pressure for the month of January 2024 and highlight the anomalies 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-03-12 12:54:04 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Filter the data for January 2024
+january_data = dfs[0].loc[dfs[0]['timestamp'].str.contains('1/2024')]
+
+# Plotting the line graph for Barometric Pressure
+plt.figure(figsize=(12, 6))
+plt.plot(january_data.index, january_data['power_plant_531c.ctr.wms.barometric_pressure'], color='blue', marker='o', linestyle='-')
+
+# Highlighting anomalies
+anomaly_threshold = [990, 1010]  # Specify the threshold values for anomalies
+anomalies = january_data[(january_data['power_plant_531c.ctr.wms.barometric_pressure'] < anomaly_threshold[0]) | (january_data['power_plant_531c.ctr.wms.barometric_pressure'] > anomaly_threshold[1])]
+plt.scatter(anomalies.index, anomalies['power_plant_531c.ctr.wms.barometric_pressure'], color='red', marker='x')
+
+plt.title('Barometric Pressure for January 2024 with Anomalies Highlighted')
+plt.xlabel('Timestamp')
+plt.ylabel('Barometric Pressure')
+plt.xticks(rotation=45)
+plt.grid(True)
+plt.legend(['Barometric Pressure', 'Anomalies'])
+
+# Save the plot as a PNG file
+plt.savefig('barometric_pressure_january_2024.png')
+plt.show()
+
+result = {"type": "plot", "value": "barometric_pressure_january_2024.png"}
+            ```
+            
+2024-03-12 12:54:04 [INFO] Executing Step 4: CachePopulation
+2024-03-12 12:54:04 [INFO] Executing Step 5: CodeExecution
+2024-03-12 12:54:04 [INFO] Saving charts to /Users/skar3krow/Desktop/csv_chatbot/exports/charts/temp_chart.png
+2024-03-12 12:54:04 [INFO] 
+Code running:
+```
+january_data = dfs[0].loc[dfs[0]['timestamp'].str.contains('1/2024')]
+plt.figure(figsize=(12, 6))
+plt.plot(january_data.index, january_data['power_plant_531c.ctr.wms.barometric_pressure'], color='blue', marker='o', linestyle='-')
+anomaly_threshold = [990, 1010]
+anomalies = january_data[(january_data['power_plant_531c.ctr.wms.barometric_pressure'] < anomaly_threshold[0]) | (january_data['power_plant_531c.ctr.wms.barometric_pressure'] > anomaly_threshold[1])]
+plt.scatter(anomalies.index, anomalies['power_plant_531c.ctr.wms.barometric_pressure'], color='red', marker='x')
+plt.title('Barometric Pressure for January 2024 with Anomalies Highlighted')
+plt.xlabel('Timestamp')
+plt.ylabel('Barometric Pressure')
+plt.xticks(rotation=45)
+plt.grid(True)
+plt.legend(['Barometric Pressure', 'Anomalies'])
+plt.savefig('/Users/skar3krow/Desktop/csv_chatbot/exports/charts/temp_chart.png')
+plt.show()
+result = {'type': 'plot', 'value': '/Users/skar3krow/Desktop/csv_chatbot/exports/charts/temp_chart.png'}
+        ```
+2024-03-12 12:54:05 [INFO] Executing Step 6: ResultValidation
+2024-03-12 12:54:05 [INFO] Answer: {'type': 'plot', 'value': '/Users/skar3krow/Desktop/csv_chatbot/exports/charts/temp_chart.png'}
+2024-03-12 12:54:05 [INFO] Executing Step 7: ResultParsing
+2024-03-12 13:00:08 [INFO] Question: How many anomalies are there in the data of barometric pressure for the month of January 2024 ?
+2024-03-12 13:00:08 [INFO] Running PandasAI with openai LLM...
+2024-03-12 13:00:08 [INFO] Prompt ID: f9c1ae43-f548-4eb3-8e3f-f9be15802d7b
+2024-03-12 13:00:08 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-12 13:00:08 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-12 13:00:08 [INFO] Executing Step 1: CacheLookup
+2024-03-12 13:00:08 [INFO] Executing Step 2: PromptGeneration
+2024-03-12 13:00:19 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 1/18/2024 16:10
+      - 2/22/2024 21:45
+      - 1/10/2024 8:25
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 4.55
+      - .nan
+      - 3.55
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 27.33
+      - 17.74
+      - .nan
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - .nan
+      - 996.78
+      - 996.02
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 379.51
+      - .nan
+      - 942.21
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - .nan
+      - 980.72
+      - 720.94
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - 63.25
+      - 83.52
+      - .nan
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - .nan
+      - 41.44
+      - 32.43
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - 212.02
+      - .nan
+      - 87.72
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 0.26
+      - .nan
+      - 2.59
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+Ambient Temperature is different from Ambient Temp for all the rows
+
+### QUERY
+ How many anomalies are there in the data of barometric pressure for the month of January 2024 ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-03-12 13:00:19 [INFO] Executing Step 3: CodeGenerator
+2024-03-12 13:00:24 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-12 13:00:24 [INFO] Prompt used:
+            dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 1/18/2024 16:10
+      - 2/22/2024 21:45
+      - 1/10/2024 8:25
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 4.55
+      - .nan
+      - 3.55
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 27.33
+      - 17.74
+      - .nan
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - .nan
+      - 996.78
+      - 996.02
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 379.51
+      - .nan
+      - 942.21
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - .nan
+      - 980.72
+      - 720.94
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - 63.25
+      - 83.52
+      - .nan
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - .nan
+      - 41.44
+      - 32.43
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - 212.02
+      - .nan
+      - 87.72
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 0.26
+      - .nan
+      - 2.59
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+Ambient Temperature is different from Ambient Temp for all the rows
+
+### QUERY
+ How many anomalies are there in the data of barometric pressure for the month of January 2024 ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-03-12 13:00:24 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Extract data for January 2024
+january_data = dfs[0].loc[1:7489]
+
+# Count anomalies in barometric pressure for January 2024
+anomalies_count = january_data['power_plant_531c.ctr.wms.barometric_pressure'].isnull().sum()
+
+# Declare result variable
+result = {
+    "type": "number",
+    "value": anomalies_count
+}
+            ```
+            
+2024-03-12 13:00:24 [INFO] Executing Step 4: CachePopulation
+2024-03-12 13:00:24 [INFO] Executing Step 5: CodeExecution
+2024-03-12 13:00:24 [INFO] 
+Code running:
+```
+january_data = dfs[0].loc[1:7489]
+anomalies_count = january_data['power_plant_531c.ctr.wms.barometric_pressure'].isnull().sum()
+result = {'type': 'number', 'value': anomalies_count}
+        ```
+2024-03-12 13:00:24 [INFO] Executing Step 6: ResultValidation
+2024-03-12 13:00:24 [INFO] Answer: {'type': 'number', 'value': 441}
+2024-03-12 13:00:24 [INFO] Executing Step 7: ResultParsing
+2024-03-12 13:01:16 [INFO] Question: Plot all the anomalies in the data of barometric pressure for the month of January 2024 on a  line graph ?
+2024-03-12 13:01:16 [INFO] Running PandasAI with openai LLM...
+2024-03-12 13:01:16 [INFO] Prompt ID: 205d9e59-3b18-4b67-81c7-46b4d42ab055
+2024-03-12 13:01:16 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-12 13:01:16 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-12 13:01:16 [INFO] Executing Step 1: CacheLookup
+2024-03-12 13:01:16 [INFO] Executing Step 2: PromptGeneration
+2024-03-12 13:01:19 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 3/2/2024 2:05
+      - 1/8/2024 9:25
+      - 1/29/2024 9:10
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 4.41
+      - 4.32
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - .nan
+      - 22.43
+      - 17.23
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - .nan
+      - 997.1
+      - 996.67
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 185.4
+      - 174.58
+      - .nan
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - .nan
+      - 901.21
+      - 329.76
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - 47.75
+      - 65.19
+      - .nan
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - .nan
+      - 23.42
+      - 64.02
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - 97.77
+      - .nan
+      - 119.34
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 7.54
+      - 3.91
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+
+### QUERY
+ Plot all the anomalies in the data of barometric pressure for the month of January 2024 on a  line graph ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-03-12 13:01:19 [INFO] Executing Step 3: CodeGenerator
+2024-03-12 13:02:22 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-12 13:02:22 [INFO] Prompt used:
+            dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 3/2/2024 2:05
+      - 1/8/2024 9:25
+      - 1/29/2024 9:10
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 4.41
+      - 4.32
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - .nan
+      - 22.43
+      - 17.23
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - .nan
+      - 997.1
+      - 996.67
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 185.4
+      - 174.58
+      - .nan
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - .nan
+      - 901.21
+      - 329.76
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - 47.75
+      - 65.19
+      - .nan
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - .nan
+      - 23.42
+      - 64.02
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - 97.77
+      - .nan
+      - 119.34
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 7.54
+      - 3.91
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+
+### QUERY
+ Plot all the anomalies in the data of barometric pressure for the month of January 2024 on a  line graph ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-03-12 13:02:22 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Filter data for January 2024
+df_january = dfs[0].iloc[1:7490]
+
+# Remove NaN values in barometric pressure
+df_january = df_january.dropna(subset=['power_plant_531c.ctr.wms.barometric_pressure'])
+
+# Identify anomalies (considering values outside a certain range as anomalies)
+mean_bp = df_january['power_plant_531c.ctr.wms.barometric_pressure'].mean()
+std_bp = df_january['power_plant_531c.ctr.wms.barometric_pressure'].std()
+lower_limit = mean_bp - 3*std_bp
+upper_limit = mean_bp + 3*std_bp
+anomalies = df_january[(df_january['power_plant_531c.ctr.wms.barometric_pressure'] < lower_limit) | 
+                       (df_january['power_plant_531c.ctr.wms.barometric_pressure'] > upper_limit)]
+
+# Plotting anomalies
+plt.figure(figsize=(12, 6))
+plt.plot(df_january['timestamp'], df_january['power_plant_531c.ctr.wms.barometric_pressure'], color='blue', label='Barometric Pressure')
+plt.scatter(anomalies['timestamp'], anomalies['power_plant_531c.ctr.wms.barometric_pressure'], color='red', label='Anomalies')
+plt.title('Anomalies in Barometric Pressure for January 2024')
+plt.xlabel('Timestamp')
+plt.ylabel('Barometric Pressure')
+plt.xticks(rotation=45)
+plt.legend()
+plt.tight_layout()
+
+# Save the plot as png file
+plt.savefig('barometric_pressure_anomalies_jan_2024.png')
+
+# Declare result as plot type
+result = {"type": "plot", "value": "barometric_pressure_anomalies_jan_2024.png"}
+            ```
+            
+2024-03-12 13:02:22 [INFO] Executing Step 4: CachePopulation
+2024-03-12 13:02:22 [INFO] Executing Step 5: CodeExecution
+2024-03-12 13:02:22 [INFO] Saving charts to /Users/skar3krow/Desktop/csv_chatbot/exports/charts/temp_chart.png
+2024-03-12 13:02:22 [INFO] 
+Code running:
+```
+df_january = dfs[0].iloc[1:7490]
+df_january = df_january.dropna(subset=['power_plant_531c.ctr.wms.barometric_pressure'])
+mean_bp = df_january['power_plant_531c.ctr.wms.barometric_pressure'].mean()
+std_bp = df_january['power_plant_531c.ctr.wms.barometric_pressure'].std()
+lower_limit = mean_bp - 3 * std_bp
+upper_limit = mean_bp + 3 * std_bp
+anomalies = df_january[(df_january['power_plant_531c.ctr.wms.barometric_pressure'] < lower_limit) | (df_january['power_plant_531c.ctr.wms.barometric_pressure'] > upper_limit)]
+plt.figure(figsize=(12, 6))
+plt.plot(df_january['timestamp'], df_january['power_plant_531c.ctr.wms.barometric_pressure'], color='blue', label='Barometric Pressure')
+plt.scatter(anomalies['timestamp'], anomalies['power_plant_531c.ctr.wms.barometric_pressure'], color='red', label='Anomalies')
+plt.title('Anomalies in Barometric Pressure for January 2024')
+plt.xlabel('Timestamp')
+plt.ylabel('Barometric Pressure')
+plt.xticks(rotation=45)
+plt.legend()
+plt.tight_layout()
+plt.savefig('/Users/skar3krow/Desktop/csv_chatbot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/skar3krow/Desktop/csv_chatbot/exports/charts/temp_chart.png'}
+        ```
+2024-03-12 13:02:22 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 13:02:23 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 13:02:23 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-03-12 13:02:40 [INFO] Executing Step 6: ResultValidation
+2024-03-12 13:02:40 [INFO] Answer: {'type': 'plot', 'value': '/Users/skar3krow/Desktop/csv_chatbot/exports/charts/temp_chart.png'}
+2024-03-12 13:02:40 [INFO] Executing Step 7: ResultParsing
+2024-03-12 13:44:27 [INFO] Question: What is the barometric pressure on 16th January 2024 at 2 ?
+2024-03-12 13:44:27 [INFO] Running PandasAI with openai LLM...
+2024-03-12 13:44:27 [INFO] Prompt ID: 9db08191-931a-4632-ae3a-da7aa408621e
+2024-03-12 13:44:27 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-12 13:44:27 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-12 13:44:27 [INFO] Executing Step 1: CacheLookup
+2024-03-12 13:44:27 [INFO] Using cached response
+2024-03-12 13:44:27 [INFO] Executing Step 2: PromptGeneration
+2024-03-12 13:44:27 [INFO] Executing Step 2: Skipping...
+2024-03-12 13:44:27 [INFO] Executing Step 3: CodeGenerator
+2024-03-12 13:44:27 [INFO] Executing Step 3: Skipping...
+2024-03-12 13:44:27 [INFO] Executing Step 4: CachePopulation
+2024-03-12 13:44:27 [INFO] Executing Step 4: Skipping...
+2024-03-12 13:44:27 [INFO] Executing Step 5: CodeExecution
+2024-03-12 13:44:27 [INFO] 
+Code running:
+```
+df_january = dfs[0][dfs[0]['timestamp'].str.contains('1/') & (dfs[0]['timestamp'].str.len() == 13)]
+barometric_pressure_16th_Jan_2 = df_january[df_january['timestamp'] == '1/16/2024 2:00']['power_plant_531c.ctr.wms.barometric_pressure'].values[0]
+result = {'type': 'number', 'value': barometric_pressure_16th_Jan_2}
+        ```
+2024-03-12 13:44:27 [ERROR] Failed with error: Traceback (most recent call last):
+  File "/Users/skar3krow/anaconda3/lib/python3.11/site-packages/pandasai/pipelines/chat/code_execution.py", line 64, in execute
+    result = code_manager.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/skar3krow/anaconda3/lib/python3.11/site-packages/pandasai/helpers/code_manager.py", line 207, in execute_code
+    exec(code_to_run, environment)
+  File "<string>", line 2, in <module>
+IndexError: index 0 is out of bounds for axis 0 with size 0
+
+2024-03-12 13:44:27 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-03-12 13:44:27 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-03-12 13:44:27 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-03-12 13:44:27 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 1/15/2024 5:15
+      - 2/20/2024 21:30
+      - 2/16/2024 2:10
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 4.61
+      - 3.68
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 27.39
+      - 28.63
+      - .nan
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - 996.16
+      - 997.09
+      - .nan
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 81.42
+      - 344.52
+      - .nan
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - 767.79
+      - 112.01
+      - .nan
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - 67.96
+      - .nan
+      - 53.41
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - 49.37
+      - .nan
+      - 18.82
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - .nan
+      - 252.85
+      - 24.88
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 2.55
+      - .nan
+      - 1.75
+
+
+The user asked the following question:
+### QUERY
+ What is the barometric pressure on 16th January 2024 at 2 ?
+
+You generated this python code:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Filter the data for January
+df_january = dfs[0][(dfs[0]['timestamp'].str.contains('1/')) & (dfs[0]['timestamp'].str.len() == 13)]
+
+# Find the specific datetime of 16th January at 2 a.m.
+barometric_pressure_16th_Jan_2 = df_january[df_january['timestamp'] == '1/16/2024 2:00']['power_plant_531c.ctr.wms.barometric_pressure'].values[0]
+
+# Declare result variable
+result = {"type": "number", "value": barometric_pressure_16th_Jan_2}
+
+It fails with the following error:
+index 0 is out of bounds for axis 0 with size 0
+
+Fix the python code above and return the new python code:
+2024-03-12 13:44:27 [INFO] Executing Step 1: CodeGenerator
+2024-03-12 13:44:34 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-12 13:44:34 [INFO] Prompt used:
+            dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 1/15/2024 5:15
+      - 2/20/2024 21:30
+      - 2/16/2024 2:10
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 4.61
+      - 3.68
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 27.39
+      - 28.63
+      - .nan
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - 996.16
+      - 997.09
+      - .nan
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 81.42
+      - 344.52
+      - .nan
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - 767.79
+      - 112.01
+      - .nan
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - 67.96
+      - .nan
+      - 53.41
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - 49.37
+      - .nan
+      - 18.82
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - .nan
+      - 252.85
+      - 24.88
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 2.55
+      - .nan
+      - 1.75
+
+
+The user asked the following question:
+### QUERY
+ What is the barometric pressure on 16th January 2024 at 2 ?
+
+You generated this python code:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Filter the data for January
+df_january = dfs[0][(dfs[0]['timestamp'].str.contains('1/')) & (dfs[0]['timestamp'].str.len() == 13)]
+
+# Find the specific datetime of 16th January at 2 a.m.
+barometric_pressure_16th_Jan_2 = df_january[df_january['timestamp'] == '1/16/2024 2:00']['power_plant_531c.ctr.wms.barometric_pressure'].values[0]
+
+# Declare result variable
+result = {"type": "number", "value": barometric_pressure_16th_Jan_2}
+
+It fails with the following error:
+index 0 is out of bounds for axis 0 with size 0
+
+Fix the python code above and return the new python code:
+            
+2024-03-12 13:44:34 [INFO] Code generated:
+            ```
+            # Filter the data for January
+df_january = dfs[0][(dfs[0]['timestamp'].str.contains('1/'))]
+
+# Find the specific datetime of 16th January at 2 a.m.
+barometric_pressure_16th_Jan_2 = df_january[df_january['timestamp'].str.contains('1/16/2024 2:')]['power_plant_531c.ctr.wms.barometric_pressure'].values
+
+if len(barometric_pressure_16th_Jan_2) > 0:
+    barometric_pressure_16th_Jan_2 = barometric_pressure_16th_Jan_2[0]
+    result = {"type": "number", "value": barometric_pressure_16th_Jan_2}
+else:
+    result = {"type": "string", "value": "No data found for 16th January 2024 at 2:00"}
+
+result
+            ```
+            
+2024-03-12 13:44:34 [INFO] 
+Code running:
+```
+df_january = dfs[0][dfs[0]['timestamp'].str.contains('1/')]
+barometric_pressure_16th_Jan_2 = df_january[df_january['timestamp'].str.contains('1/16/2024 2:')]['power_plant_531c.ctr.wms.barometric_pressure'].values
+if len(barometric_pressure_16th_Jan_2) > 0:
+    barometric_pressure_16th_Jan_2 = barometric_pressure_16th_Jan_2[0]
+    result = {'type': 'number', 'value': barometric_pressure_16th_Jan_2}
+else:
+    result = {'type': 'string', 'value': 'No data found for 16th January 2024 at 2:00'}
+result
+        ```
+2024-03-12 13:44:34 [INFO] Executing Step 6: ResultValidation
+2024-03-12 13:44:34 [INFO] Answer: {'type': 'number', 'value': 996.0}
+2024-03-12 13:44:34 [INFO] Executing Step 7: ResultParsing
+2024-03-12 13:46:11 [INFO] Question: What is the barometric pressure on 16th January 2024 at 2 ?
+2024-03-12 13:46:11 [INFO] Running PandasAI with openai LLM...
+2024-03-12 13:46:11 [INFO] Prompt ID: babe567f-c58b-442f-917b-2df6b84ea4d3
+2024-03-12 13:46:11 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-12 13:46:11 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-12 13:46:11 [INFO] Executing Step 1: CacheLookup
+2024-03-12 13:46:11 [INFO] Using cached response
+2024-03-12 13:46:11 [INFO] Executing Step 2: PromptGeneration
+2024-03-12 13:46:11 [INFO] Executing Step 2: Skipping...
+2024-03-12 13:46:11 [INFO] Executing Step 3: CodeGenerator
+2024-03-12 13:46:11 [INFO] Executing Step 3: Skipping...
+2024-03-12 13:46:11 [INFO] Executing Step 4: CachePopulation
+2024-03-12 13:46:11 [INFO] Executing Step 4: Skipping...
+2024-03-12 13:46:11 [INFO] Executing Step 5: CodeExecution
+2024-03-12 13:46:11 [INFO] 
+Code running:
+```
+df_january = dfs[0][dfs[0]['timestamp'].str.contains('1/') & (dfs[0]['timestamp'].str.len() == 13)]
+barometric_pressure_16th_Jan_2 = df_january[df_january['timestamp'] == '1/16/2024 2:00']['power_plant_531c.ctr.wms.barometric_pressure'].values[0]
+result = {'type': 'number', 'value': barometric_pressure_16th_Jan_2}
+        ```
+2024-03-12 13:46:11 [ERROR] Failed with error: Traceback (most recent call last):
+  File "/Users/skar3krow/anaconda3/lib/python3.11/site-packages/pandasai/pipelines/chat/code_execution.py", line 64, in execute
+    result = code_manager.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/skar3krow/anaconda3/lib/python3.11/site-packages/pandasai/helpers/code_manager.py", line 207, in execute_code
+    exec(code_to_run, environment)
+  File "<string>", line 2, in <module>
+IndexError: index 0 is out of bounds for axis 0 with size 0
+
+2024-03-12 13:46:11 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-03-12 13:46:11 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-03-12 13:46:11 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-03-12 13:46:11 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 2/18/2024 12:10
+      - 1/20/2024 18:25
+      - 1/29/2024 13:15
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 4.87
+      - 2.87
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 33.28
+      - .nan
+      - 23.04
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - 997.13
+      - 996.62
+      - .nan
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 510.19
+      - .nan
+      - 399.57
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - .nan
+      - 360.73
+      - 771.11
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - .nan
+      - 18.04
+      - 76.31
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - 43.27
+      - 54.05
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - .nan
+      - 78.9
+      - 162.07
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 1.43
+      - 3.1
+      - .nan
+
+
+The user asked the following question:
+### QUERY
+ What is the barometric pressure on 16th January 2024 at 2 ?
+
+You generated this python code:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Filter the data for January
+df_january = dfs[0][(dfs[0]['timestamp'].str.contains('1/')) & (dfs[0]['timestamp'].str.len() == 13)]
+
+# Find the specific datetime of 16th January at 2 a.m.
+barometric_pressure_16th_Jan_2 = df_january[df_january['timestamp'] == '1/16/2024 2:00']['power_plant_531c.ctr.wms.barometric_pressure'].values[0]
+
+# Declare result variable
+result = {"type": "number", "value": barometric_pressure_16th_Jan_2}
+
+It fails with the following error:
+index 0 is out of bounds for axis 0 with size 0
+
+Fix the python code above and return the new python code:
+2024-03-12 13:46:11 [INFO] Executing Step 1: CodeGenerator
+2024-03-12 13:46:20 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-12 13:46:20 [INFO] Prompt used:
+            dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 2/18/2024 12:10
+      - 1/20/2024 18:25
+      - 1/29/2024 13:15
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 4.87
+      - 2.87
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 33.28
+      - .nan
+      - 23.04
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - 997.13
+      - 996.62
+      - .nan
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 510.19
+      - .nan
+      - 399.57
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - .nan
+      - 360.73
+      - 771.11
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - .nan
+      - 18.04
+      - 76.31
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - 43.27
+      - 54.05
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - .nan
+      - 78.9
+      - 162.07
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - 1.43
+      - 3.1
+      - .nan
+
+
+The user asked the following question:
+### QUERY
+ What is the barometric pressure on 16th January 2024 at 2 ?
+
+You generated this python code:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Filter the data for January
+df_january = dfs[0][(dfs[0]['timestamp'].str.contains('1/')) & (dfs[0]['timestamp'].str.len() == 13)]
+
+# Find the specific datetime of 16th January at 2 a.m.
+barometric_pressure_16th_Jan_2 = df_january[df_january['timestamp'] == '1/16/2024 2:00']['power_plant_531c.ctr.wms.barometric_pressure'].values[0]
+
+# Declare result variable
+result = {"type": "number", "value": barometric_pressure_16th_Jan_2}
+
+It fails with the following error:
+index 0 is out of bounds for axis 0 with size 0
+
+Fix the python code above and return the new python code:
+            
+2024-03-12 13:46:20 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Filter the data for January
+df_january = dfs[0][(dfs[0]['timestamp'].str.contains('1/')) & (dfs[0]['timestamp'].str.len() == 13)]
+
+# Find the specific datetime of 16th January at 2 a.m.
+specific_datetime = '1/16/2024 2:00'
+if specific_datetime in df_january['timestamp'].values:
+    barometric_pressure_16th_Jan_2 = df_january[df_january['timestamp'] == specific_datetime]['power_plant_531c.ctr.wms.barometric_pressure'].values[0]
+    result = {"type": "number", "value": barometric_pressure_16th_Jan_2}
+else:
+    result = {"type": "string", "value": "No data available for 1/16/2024 2:00"}
+
+result
+            ```
+            
+2024-03-12 13:46:20 [INFO] 
+Code running:
+```
+df_january = dfs[0][dfs[0]['timestamp'].str.contains('1/') & (dfs[0]['timestamp'].str.len() == 13)]
+specific_datetime = '1/16/2024 2:00'
+if specific_datetime in df_january['timestamp'].values:
+    barometric_pressure_16th_Jan_2 = df_january[df_january['timestamp'] == specific_datetime]['power_plant_531c.ctr.wms.barometric_pressure'].values[0]
+    result = {'type': 'number', 'value': barometric_pressure_16th_Jan_2}
+else:
+    result = {'type': 'string', 'value': 'No data available for 1/16/2024 2:00'}
+result
+        ```
+2024-03-12 13:46:20 [INFO] Executing Step 6: ResultValidation
+2024-03-12 13:46:20 [INFO] Answer: {'type': 'string', 'value': 'No data available for 1/16/2024 2:00'}
+2024-03-12 13:46:20 [INFO] Executing Step 7: ResultParsing
+2024-03-12 13:46:44 [INFO] Question: What is the barometric pressure on 16th January 2024 at 4 ?
+2024-03-12 13:46:44 [INFO] Running PandasAI with openai LLM...
+2024-03-12 13:46:44 [INFO] Prompt ID: 868f8898-097c-47ce-ad13-a47a81aef06e
+2024-03-12 13:46:44 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-12 13:46:44 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-12 13:46:44 [INFO] Executing Step 1: CacheLookup
+2024-03-12 13:46:44 [INFO] Executing Step 2: PromptGeneration
+2024-03-12 13:46:46 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 1/27/2024 19:20
+      - 2/13/2024 5:15
+      - 1/13/2024 11:05
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 4.02
+      - 7.05
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 37.54
+      - 32.01
+      - .nan
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - .nan
+      - 997.01
+      - 996.87
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 810.21
+      - .nan
+      - 922.06
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - .nan
+      - 20.38
+      - 689.74
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - 70.18
+      - 41.83
+      - .nan
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - .nan
+      - 56.7
+      - 44.85
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - 259.47
+      - .nan
+      - 233.63
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - .nan
+      - 4.51
+      - 1.1
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+
+### QUERY
+ What is the barometric pressure on 16th January 2024 at 4 ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-03-12 13:46:46 [INFO] Executing Step 3: CodeGenerator
+2024-03-12 13:46:51 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-03-12 13:46:51 [INFO] Prompt used:
+            dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 17281
+  columns: 16
+  schema:
+    fields:
+    - name: timestamp
+      type: object
+      samples:
+      - 1/27/2024 19:20
+      - 2/13/2024 5:15
+      - 1/13/2024 11:05
+    - name: power_plant_531c.ctr.wms.acc_gii_radiation
+      type: float64
+      samples:
+      - 4.02
+      - 7.05
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.ambient_temperature
+      type: float64
+      samples:
+      - 37.54
+      - 32.01
+      - .nan
+    - name: power_plant_531c.ctr.wms.baromatic_pressure
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.barometric_pressure
+      type: float64
+      samples:
+      - .nan
+      - 997.01
+      - 996.87
+    - name: power_plant_531c.ctr.wms.communication_status
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.gii_radiation
+      type: float64
+      samples:
+      - 810.21
+      - .nan
+      - 922.06
+    - name: power_plant_531c.ctr.wms.ghi_radiation
+      type: float64
+      samples:
+      - .nan
+      - 20.38
+      - 689.74
+    - name: power_plant_531c.ctr.wms.humidity
+      type: float64
+      samples:
+      - 70.18
+      - 41.83
+      - .nan
+    - name: power_plant_531c.ctr.wms.module_temperature
+      type: float64
+      samples:
+      - .nan
+      - 56.7
+      - 44.85
+    - name: power_plant_531c.ctr.wms.poa_radiation
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.poa_radiation_accumulated
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.rain
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: power_plant_531c.ctr.wms.wind_direction
+      type: float64
+      samples:
+      - 259.47
+      - .nan
+      - 233.63
+    - name: power_plant_531c.ctr.wms.wind_speed
+      type: float64
+      samples:
+      - .nan
+      - 4.51
+      - 1.1
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+Here are additional documents for reference. Feel free to use them to answer.
+Barometric Pressure is different from Baromatic Pressure for all the rows
+The data for January starts form row 2 till row 7489
+
+### QUERY
+ What is the barometric pressure on 16th January 2024 at 4 ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-03-12 13:46:51 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Select the relevant data for January
+january_data = dfs[0][(dfs[0]['timestamp'].str.contains('1/')) & (dfs[0]['timestamp'].str.len() > 6)]
+
+# Extract day and hour from timestamp
+january_data['day'] = january_data['timestamp'].str.split('/').str[1].astype(int)
+january_data['hour'] = january_data['timestamp'].str.split(' ').str[1].str.split(':').str[0].astype(int)
+
+# Filter data for 16th January at 4
+required_data = january_data[(january_data['day'] == 16) & (january_data['hour'] == 4)]
+
+# Extract the barometric pressure value
+barometric_pressure = required_data['power_plant_531c.ctr.wms.barometric_pressure'].values[0]
+
+result = {"type": "number", "value": barometric_pressure}
+            ```
+            
+2024-03-12 13:46:51 [INFO] Executing Step 4: CachePopulation
+2024-03-12 13:46:51 [INFO] Executing Step 5: CodeExecution
+2024-03-12 13:46:51 [INFO] 
+Code running:
+```
+january_data = dfs[0][dfs[0]['timestamp'].str.contains('1/') & (dfs[0]['timestamp'].str.len() > 6)]
+january_data['day'] = january_data['timestamp'].str.split('/').str[1].astype(int)
+january_data['hour'] = january_data['timestamp'].str.split(' ').str[1].str.split(':').str[0].astype(int)
+required_data = january_data[(january_data['day'] == 16) & (january_data['hour'] == 4)]
+barometric_pressure = required_data['power_plant_531c.ctr.wms.barometric_pressure'].values[0]
+result = {'type': 'number', 'value': barometric_pressure}
+        ```
+2024-03-12 13:46:51 [INFO] Executing Step 6: ResultValidation
+2024-03-12 13:46:51 [INFO] Answer: {'type': 'number', 'value': 996.0}
+2024-03-12 13:46:51 [INFO] Executing Step 7: ResultParsing
+2024-03-12 13:47:05 [INFO] Question: What are the first five rows ?
+2024-03-12 13:47:05 [INFO] Running PandasAI with openai LLM...
+2024-03-12 13:47:05 [INFO] Prompt ID: 16ac2607-af07-4cd4-bd69-409d6d08f02b
+2024-03-12 13:47:05 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-03-12 13:47:05 [INFO] Executing Step 0: ValidatePipelineInput
+2024-03-12 13:47:05 [INFO] Executing Step 1: CacheLookup
+2024-03-12 13:47:05 [INFO] Using cached response
+2024-03-12 13:47:05 [INFO] Executing Step 2: PromptGeneration
+2024-03-12 13:47:05 [INFO] Executing Step 2: Skipping...
+2024-03-12 13:47:05 [INFO] Executing Step 3: CodeGenerator
+2024-03-12 13:47:05 [INFO] Executing Step 3: Skipping...
+2024-03-12 13:47:05 [INFO] Executing Step 4: CachePopulation
+2024-03-12 13:47:05 [INFO] Executing Step 4: Skipping...
+2024-03-12 13:47:05 [INFO] Executing Step 5: CodeExecution
+2024-03-12 13:47:05 [INFO] 
+Code running:
+```
+first_five_rows = dfs[0].head()
+result = {'type': 'dataframe', 'value': first_five_rows}
+        ```
+2024-03-12 13:47:05 [INFO] Executing Step 6: ResultValidation
+2024-03-12 13:47:05 [INFO] Answer: {'type': 'dataframe', 'value':        timestamp  power_plant_531c.ctr.wms.acc_gii_radiation  ...  power_plant_531c.ctr.wms.wind_direction  power_plant_531c.ctr.wms.wind_speed
+0  1/6/2024 0:00                                        5.66  ...                                    45.68                                 1.57
+1  1/6/2024 0:05                                        0.00  ...                                    48.32                                 1.58
+2  1/6/2024 0:10                                        0.00  ...                                    51.25                                 1.54
+3  1/6/2024 0:15                                        0.00  ...                                    53.67                                 1.50
+4  1/6/2024 0:20                                        0.00  ...                                    61.90                                 1.33
+
+[5 rows x 16 columns]}
+2024-03-12 13:47:05 [INFO] Executing Step 7: ResultParsing
