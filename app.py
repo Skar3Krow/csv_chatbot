@@ -10,9 +10,11 @@ from htmlTemplates import css, bot_template, user_template
 
 load_dotenv()
 
-openai_api_key = os.getenv('OPEN_API_KEY')
+openai_api_key = os.getenv('OPENAI_API_KEY')
 os.environ["PANDASAI_API_KEY"] = os.getenv('YOUR_PANDASAIAPI_KEY')
-st.set_page_config(page_title="CSV-GPT",layout='wide',page_icon=":bar_chart:")
+with open('styles.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+# st.set_page_config(page_title="CSV-GPT",layout='wide',page_icon=":bar_chart:")
 
 st.write(css,unsafe_allow_html=True)
 card1 ='''
@@ -23,8 +25,9 @@ card1 ='''
   transition: 0.3s;
     border-radius: 5px;
     height:200px;
-    width:200px;
-    background-color:#1e1f20;
+    width:500px;
+    background-color:#352419;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     margin:20px;
 }
 
@@ -40,6 +43,7 @@ card1 ='''
   padding: 2px 16px;
 }
 .cunt{
+
 display:flex;
 flex-direction:row;
     justify-content:center;
@@ -49,8 +53,7 @@ flex-direction:row;
     <div class="card">
   
   <div class="container">
-    <span style='font-size:50px;'>&#128187;</span>
-    <h4><b>Step 1</b></h4>    
+    <h4><b>Simple Uploading</b></h4>    
     <p>Upload the .csv file in the sidebar</p>
   </div>
 </div>
@@ -59,19 +62,11 @@ flex-direction:row;
 <div class="card">
   
   <div class="container">
-  <span style='font-size:50px;'>&#128070;</span>
-    <h4><b>Step 2</b></h4>
-    <p>Click on "Browse files" button and wait</p>
+    <h4><b>Seamless Interaction</b></h4>
+    <p>Ask any question related to the csv</p>
   </div>
 </div>
-<div class="card">
-  
-  <div class="container">
-  <span style='font-size:50px;'>🔍</span>
-    <h4><b>Step 3</b></h4>
-    <p>Ask questions from the CSV file</p>
-  </div>
-</div>
+
 </div>
 
 '''
@@ -92,25 +87,25 @@ def chat_wtih_csv(df,prompt):
     return result
 
 
-st.markdown("<h1 style='text-align: center; color: white;'>Chat to CSV powered by LLM</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #927fe6;'>CSV Chatbot: Interact with Your Data Seamlessly</h1>", unsafe_allow_html=True)
 
 # st.title("")
 with st.sidebar:
-    st.header("Upload the .csv file here",divider="rainbow")
-    input_csv = st.file_uploader("Upload your CSV file",type=['csv'])
+    st.header("Upload the .csv file here",divider="green")
+    input_csv = st.file_uploader("",type=['csv'])
 
 
 if input_csv is not None:
     col1,col2 =st.columns([1,2])
     with col1:
-      st.success("CSV Uploaded Successfully")
+      st.success("CSV Uploaded Successfully, reference shown below")
       data = pd.read_csv(input_csv)
       st.dataframe(data)
     with col2:
-        st.info("Chat with your CSV")
+        st.info("Interact with your Data")
         input_text = st.text_area("Enter your query")
         if input_text is not None:
-            if st.button("Chat with CSV"):
+            if st.button("Enquire"):
                 st.write(user_template.replace(
                 "{{MSG}}", input_text), unsafe_allow_html=True)
                 
