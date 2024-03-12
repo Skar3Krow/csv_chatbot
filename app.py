@@ -12,74 +12,19 @@ load_dotenv()
 
 openai_api_key = os.getenv('OPENAI_API_KEY')
 os.environ["PANDASAI_API_KEY"] = os.getenv('YOUR_PANDASAIAPI_KEY')
-with open('styles.css') as f:
-    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-# st.set_page_config(page_title="CSV-GPT",layout='wide',page_icon=":bar_chart:")
-
-st.write(css,unsafe_allow_html=True)
-card1 ='''
-<style>
-.card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-    border-radius: 5px;
-    height:200px;
-    width:500px;
-    background-color:#352419;
-    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-    margin:20px;
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    background-color:#2f3133    ;
-
-}
-
-/* Add some padding inside the card container */
-.container {
-  padding: 2px 16px;
-}
-.cunt{
-
-display:flex;
-flex-direction:row;
-    justify-content:center;
-}
-</style>
-<div class="cunt">
-    <div class="card">
-  
-  <div class="container">
-    <h4><b>Simple Uploading</b></h4>    
-    <p>Upload the .csv file in the sidebar</p>
-  </div>
-</div>
-
-
-<div class="card">
-  
-  <div class="container">
-    <h4><b>Seamless Interaction</b></h4>
-    <p>Ask any question related to the csv</p>
-  </div>
-</div>
-
-</div>
-
-'''
+# with open('styles.css') as f:
+#     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+st.set_page_config(page_title="CSV-GPT",layout='wide',page_icon=":bar_chart:")
 
 def chat_wtih_csv(df,prompt):
     llm =OpenAI(temperature=1)
     # pandas_ai = SmartDataframe(df=df,config={"llm":llm})
 
     pandas_ai = Agent(dfs=df,config={"llm":llm},memory_size=10)
-    pandas_ai.train(docs="The data for January starts from row 2 till row 7489")
+    # pandas_ai.train(docs="The data for January starts from row 2 till row 7489")
 
-    response = pandas_ai.chat("How many rows are considered for January?")
-    print(response)
+    # response = pandas_ai.chat("How many rows are considered for January?")
+    # print(response)
     
 
     result = pandas_ai.chat(prompt)
@@ -88,27 +33,30 @@ def chat_wtih_csv(df,prompt):
     return result
 
 
-st.markdown("<h1 style='text-align: center; color: #927fe6;'>CSV Chatbot: Interact with Your Data Seamlessly</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #927fe6; padding:0px 100px 20px 100px;font-size:4rem'>CSV Chatbot</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: #927fe6; padding:0px 100px 80px 100px;font-size:2rem;'>Interact with your Data, Seamlessly</h2>", unsafe_allow_html=True)
 
-# st.title("")
-with st.sidebar:
-    st.header("Upload the .csv file here",divider="green")
+
+
+col1, col2 =st.columns([5, 2])
+
+with col2:
+    st.header("Upload the .csv file here",divider="violet")
     input_csv = st.file_uploader("",type=['csv'])
+    
+with col1:
+    if input_csv is not None:
+        st.success("CSV Uploaded Successfully, reference shown below", icon="✅")
+        data = pd.read_csv(input_csv)
 
+        st.dataframe(data)
+    
 
-if input_csv is not None:
-    col1,col2 =st.columns([1,2])
-    with col1:
-      st.success("CSV Uploaded Successfully, reference shown below")
-      data = pd.read_csv(input_csv)
-      st.dataframe(data)
-    with col2:
         st.info("Interact with your Data")
         input_text = st.text_area("Enter your query")
         if input_text is not None:
             if st.button("Enquire"):
-                st.write(user_template.replace(
-                "{{MSG}}", input_text), unsafe_allow_html=True)
+                st.write(user_template.replace("{{MSG}}", input_text), unsafe_allow_html=True)
                 
                 # st.info("Your query: "+input_text)
                 
@@ -116,7 +64,10 @@ if input_csv is not None:
                 # st.write(bot_template.replace(
                 # "{{MSG}}", result), unsafe_allow_html=True)
                 st.success(result)
-else:
-    st.markdown(card1, unsafe_allow_html=True)
-                
+        
+
+     
+
+
+                  
 
